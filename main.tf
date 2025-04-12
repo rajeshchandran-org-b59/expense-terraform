@@ -1,6 +1,6 @@
 module "frontend" {
   depends_on     = [module.backend]
-  source         = "git::https://github.com/B59-CloudDevOps/tf-module-app.git"
+  source         = "git::https://github.com/rajeshchandran-org-b59/tf-module-app.git" #https://github.com/B59-CloudDevOps/tf-module-app.git
   env            = var.env
   zone_id        = var.zone_id
   instance_type  = var.components["frontend"]["instance_type"]
@@ -12,7 +12,7 @@ module "frontend" {
 
 module "backend" {
   depends_on     = [module.mysql]
-  source         = "git::https://github.com/B59-CloudDevOps/tf-module-app.git"
+  source         = "git::https://github.com/rajeshchandran-org-b59/tf-module-app.git" #https://github.com/B59-CloudDevOps/tf-module-app.git
   env            = var.env
   zone_id        = var.zone_id
   instance_type  = var.components["backend"]["instance_type"]
@@ -23,7 +23,7 @@ module "backend" {
 }
 
 module "mysql" {
-  source         = "git::https://github.com/B59-CloudDevOps/tf-module-app.git"
+  source         = "git::https://github.com/rajeshchandran-org-b59/tf-module-app.git" #https://github.com/B59-CloudDevOps/tf-module-app.git
   env            = var.env
   zone_id        = var.zone_id
   instance_type  = var.components["mysql"]["instance_type"]
